@@ -1,0 +1,45 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "test@test.test",
+      "firstName": "Daniel",
+      "lastName": "Matev",
+      "password": "1234567"
+    },
+    {
+      "email": "",
+      "password": "",
+      "firstName": "",
+      "lastName": "",
+      "id": 2
+    },
+    {
+      "email": "danny.matev@gmail.com",
+      "password": "123456789",
+      "firstName": "Daniel",
+      "lastName": "Matev",
+      "id": 3
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "'How to pass uni' for beginners",
+      "description": "A deep guide on how to pass university with minimal effort while working full-time.",
+      "rating": "5/5"
+    },
+    {
+      "id": 2,
+      "title": "Java OCP exam preparation",
+      "description": "A course aimed at preparing you for taking the Oracle Java OCP exam.",
+      "rating": "5/5"
+    },
+    {
+      "id": 3,
+      "title": "Angular from zero to hero",
+      "description": "Hands-on guide on making SPA applications with angular.",
+      "rating": "5/5"
+    }
+  ]
+}
