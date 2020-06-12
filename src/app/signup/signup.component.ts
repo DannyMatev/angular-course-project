@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {UserModel} from '../model/user.model';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {UserService} from '../authentication/user.service';
 import {Config} from '../config/config';
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -12,6 +13,7 @@ import {Config} from '../config/config';
 export class SignupComponent implements OnInit {
   user: UserModel;
   error: string;
+
   constructor(private httpClient: HttpClient,
               private userService: UserService,
               private router: Router) {
@@ -24,6 +26,9 @@ export class SignupComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (localStorage.getItem('user') !== null) {
+      this.router.navigate(['courses']);
+    }
   }
 
   async signup() {

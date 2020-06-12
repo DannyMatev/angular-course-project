@@ -27,11 +27,14 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (localStorage.getItem('user') !== null) {
+      this.router.navigate(['courses']);
+    }
   }
 
   async login() {
     const foundUser =
-      await this.httpClient.get<UserModel[]>(`${Config.USERS_API_URL}users?email=${this.user.email}&password=${this.user.password}`)
+      await this.httpClient.get<UserModel[]>(`${Config.USERS_API_URL}?email=${this.user.email}&password=${this.user.password}`)
         .toPromise();
     if (foundUser[0] !== undefined) {
       this.userService.setLoggedInUser(foundUser[0]);
